@@ -18,6 +18,7 @@ class News(models.Model):
     )
 
     image = models.ImageField(
+        'Картинка',
         upload_to='news/',
         blank=True,
         null=True

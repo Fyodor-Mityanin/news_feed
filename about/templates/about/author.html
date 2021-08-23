@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Об авторе{% endblock %}
 {% block content %}
-<div class="custom-center-block">
-    <p class="custom-text-block">Тут пока только мой гитхаб&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="github-button" href="https://github.com/Fyodor-Mityanin"
-        data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;" data-size="large"
-        aria-label="Follow @Fyodor-Mityanin on GitHub">Follow @Fyodor-Mityanin</a>
-    </p>
+<div class="card mb-3 mt-1 shadow-sm">
+    <div class="card-body">
+        <p class="card-text">
+            <strong class="d-block text-gray-dark">Тут пока только мой гитхаб</strong>
+            <a class="github-button" href="https://github.com/Fyodor-Mityanin"
+            data-color-scheme="no-preference: light; light: light; dark: dark_dimmed;" data-size="large"
+            aria-label="Follow @Fyodor-Mityanin on GitHub">Follow @Fyodor-Mityanin</a>
+        </p>
+    </div>
 </div>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 {% endblock %}
