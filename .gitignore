@@ -3,4 +3,5 @@ venv_news_feed/
 .vscode
 media/
 db.sqlite3
-
+__pycache__/
+migrathions/
