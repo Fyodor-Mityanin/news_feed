@@ -1,10 +1,8 @@
 from django.core.paginator import Paginator
 from django.shortcuts import redirect, render
 
-from .forms import NewsForm, PageForm
+from .forms import NEWS_ON_PAGE_CHOICES, NewsForm, PageForm
 from .models import News
-
-from .forms import NEWS_ON_PAGE_CHOICES
 
 posible_news_on_page = [int(x[0]) for x in NEWS_ON_PAGE_CHOICES]
 

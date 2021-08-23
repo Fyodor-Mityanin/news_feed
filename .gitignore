@@ -4,5 +4,5 @@ venv_news_feed/
 media/
 db.sqlite3
 __pycache__/
-migrathions/
+migrations/
 .commands

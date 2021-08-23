@@ -14,4 +14,5 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ('pub_date',)
     empty_value_display = '-пусто-'
 
+
 admin.site.register(News, NewsAdmin)
