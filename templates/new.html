@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}.
+Добавление новости
+{% endblock %}
+{% block content %}
+{% load custom_filters %}
+
+
+<div class="row justify-content-center">
+  <div class="col-md-12 p-5">
+    <div class="card">
+      <div class="card-header">
+        Добавление новости
+      </div>
+      <div class="card-body">
+
+        {% for error in form.errors %}
+        <div class="alert alert-danger" role="alert">
+          {{ error|escape }}
+        </div>
+        {% endfor %}
+
+        <form method="post" enctype="multipart/form-data">
+
+          {% for field in form %}
+          <div class="form-group row">
+            <label for="{{ field.id_for_label }}" class="col-md-2 col-form-label text-md-right">{{ field.label}}</label>
+            <div class="col-md-10" {% if field.help_text %} title="{{ field.help_text }}" {% endif %}>
+
+              {{ field|addclass:"form-control" }}
+
+            </div>
+          </div>
+          {% endfor %}
+
+          <div class="col-md-6 offset-md-2">
+            <button type="submit" class="btn btn-primary">
+              Запостить
+            </button>
+          </div>
+        </form>
+      </div> <!-- card body -->
+    </div> <!-- card -->
+  </div> <!-- col -->
+</div> <!-- row -->
+
+
+{% endblock %}

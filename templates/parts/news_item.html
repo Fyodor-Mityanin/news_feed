@@ -1,0 +1,18 @@
+<div class="card mb-3 mt-1 shadow-sm">
+    <!-- Отображение картинки -->
+    {% load thumbnail %}
+    {% thumbnail news.image "960x300" crop="center" upscale=True as im %}
+    <img class="card-img" src="{{ im.url }}" />
+    {% endthumbnail %}
+    <!-- Отображение текста новости -->
+    <div class="card-body">
+        <p class="card-text">
+            <strong class="d-block text-gray-dark">{{ news.title }}</strong>
+            {{ news.text|linebreaksbr }}
+        </p>
+
+            <!-- Дата публикации новости -->
+            <small class="text-muted">{{ news.pub_date }}</small>
+
+    </div>
+</div>

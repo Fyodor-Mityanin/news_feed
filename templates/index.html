@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %} Лента новостей {% endblock %}
+
+{% block content %}
+<div class="container">
+
+    {% include "parts/menu.html" with index=True %}
+    {% for news in page %}
+    {% include "parts/news_item.html" with news=news %}
+    {% endfor %}
+
+    {% if page.has_other_pages %}
+    {% include "parts/paginator.html" with items=page paginator=paginator%}
+    {% endif %}
+
+</div>
+
+{% endblock %}

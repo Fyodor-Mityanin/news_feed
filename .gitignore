@@ -1,0 +1,6 @@
+.env
+venv_news_feed/
+.vscode
+media/
+db.sqlite3
+
